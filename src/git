@@ -1,3 +1,0 @@
-# Change last commit message
-1. git commit --amend -m "<NEW MESAGE>"
-2. git push --force
