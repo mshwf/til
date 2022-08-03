@@ -7,3 +7,7 @@
 
 **Delete remote branch:**  
 `git push origin --delete remoteBranchName`
+
+**Sync local branches with remote:**  
+`git fetch -p`  
+_The -p or --prune argument will update the local database of remote branches._
