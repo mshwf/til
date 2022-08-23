@@ -1,8 +1,8 @@
 ## Commands
 
-run	[name]	> run a container from an image, downloads it if it's not found, if it's a web server, it will run in attached mode. [name] is the image name or id, container is an instance of an image.
+`run <image name | image id>` runs a container from an image, downloads it if it's not found, if it's a web server, it will run in attached mode.
 
-run [name:tag]	> run a container with a specific tag
+run [name:tag]	> run a container with a specific tag  
 	-d	> runs a container in a detached (background) mode (you can keep working in console)
 	-it	>'i'nteractive 't'erminal mode (uses the current terminal for the running container process in interactive way)
 	--name (string)> assign a name to the container
@@ -14,9 +14,9 @@ rm [name|id]>	> kills/remove container
 images>		> lists all images
 version		> lists version matrix
 
-logs [container_id | name]> show logs of a running container (useful for containers running in background 'detached mode')
+`logs [container_id | name]` show logs of a running container (useful for containers running in background 'detached mode')
 
-docker images -f dangling=true -q> lists dangling images (<none> images)
+`docker images -f dangling=true -q` lists dangling images (<none> images)
 
 stop $(docker ps -a -q)	> stops all containers
 
@@ -25,7 +25,7 @@ docker load -i [path to image tar file] > load docker image from tar file [https
 
 docker-compose up> run all containers defined in the docker-compose file
 docker-compose down> stop all containers defined in the docker-compose file
-==============================
+
 
 container data is lost after removing container (https://youtu.be/fqMOX6JJhGo?t=2408)
 
