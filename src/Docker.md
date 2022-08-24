@@ -1,7 +1,7 @@
 ## Commands
 
 `run <image name | image id>` runs a container from an image, downloads it if it's not found, if it's a web server, it will run in attached mode.
-
+```
 run [name:tag]	> run a container with a specific tag  
 	-d	> runs a container in a detached (background) mode (you can keep working in console)
 	-it	>'i'nteractive 't'erminal mode (uses the current terminal for the running container process in interactive way)
@@ -43,3 +43,4 @@ Move out the logs folder:
 
 If you are attempting to add a container to an existing network that no longer exists, then you can use:
 	docker-compose up --force-recreate
+```
