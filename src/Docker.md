@@ -43,4 +43,8 @@ Move out the logs folder:
 
 If you are attempting to add a container to an existing network that no longer exists, then you can use:
 	docker-compose up --force-recreate
+	
+Get environment variables:
+	docker exec container env
+
 ```
