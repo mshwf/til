@@ -11,3 +11,9 @@
 **Sync local branches with remote:**  
 `git fetch -p`  
 _The -p or --prune argument will update the local database of remote branches._
+
+**Squashing N commits in a branch**  
+`git reset --soft HEAD~<N>`  
+`git commit -m "MESAAGE"`  
+`git push --force`  
+
