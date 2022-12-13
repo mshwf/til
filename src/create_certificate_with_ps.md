@@ -1,7 +1,7 @@
 To create a self-signed certificate:
 
 ```
-New-SelfSignedCertificate -DnsName "get-pid-server", "10.3.20.45" -CertStoreLocation "cert:\LocalMachine\My" -NotAfter (Get-Date).AddYears(10) -FriendlyName "Root CA" -KeyUsageProperty All -KeyUsage CertSign, CRLSign, DigitalSignature
+New-SelfSignedCertificate -DnsName "localhost" -CertStoreLocation "cert:\LocalMachine\My" -NotAfter (Get-Date).AddYears(10) -FriendlyName "Root CA" -KeyUsageProperty All -KeyUsage CertSign, CRLSign, DigitalSignature
 ```
 
 _Copy the Thumbprint from the output._
@@ -23,5 +23,5 @@ $rootcert = (Get-ChildItem -Path cert:\LocalMachine\My\<thumbprint of the root C
 
 Sign the client certificate:
 ```
-New-SelfSignedCertificate -certstorelocation cert:\localmachine\my -dnsname "localhostclient" -Signer $rootcert -NotAfter (Get-Date).AddYears(10) -FriendlyName "Clientlocalhost"
+New-SelfSignedCertificate -certstorelocation cert:\localmachine\my -dnsname "localhostclient" -Signer $rootcert -NotAfter (Get-Date).AddYears(10) -FriendlyName "Client"
 ```
