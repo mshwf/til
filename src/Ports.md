@@ -1,5 +1,5 @@
 To find if a specific port is being used:  
-`Get-Process -Id (Get-NetTCPConnection -LocalPort YourPortNumberHere).OwningProcess`  
+`Get-Process -Id (Get-NetTCPConnection -LocalPort 5000).OwningProcess`  
 or:  
 `netstat -ano | findstr :<PORT>`
 
