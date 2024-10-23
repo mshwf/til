@@ -17,3 +17,5 @@ _The -p or --prune argument will update the local database of remote branches._
 `git commit -m "MESAAGE"`  
 `git push --force`  
 
+** Merge changes of source branch into target (current) branch as uncommitted changes:
+`git checkout origin/<source-branch> -- .`
